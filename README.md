@@ -16,9 +16,10 @@
    1️⃣ 생성자 주입 (권장)
 
      @Service
+     @RequiredArgsConstructor
      public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
